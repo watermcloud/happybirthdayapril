@@ -1,7 +1,7 @@
 // trigger to play music in the background with sweetalert
 window.addEventListener('load', () => {
     Swal.fire({
-        title: 'Hey, do you want me to play some music in the background?',
+        title: 'Do you want to play music in the background?',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -25,13 +25,13 @@ const animationTimeline = () => {
     const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
     const hbd = document.getElementsByClassName("wish-hbd")[0];
 
-    textBoxChars.innerHTML = <span>${textBoxChars.innerHTML
+    textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
         .split("")
-        .join("</span><span>")}</span>;
+        .join("</span><span>")}</span>`;
 
-    hbd.innerHTML = <span>${hbd.innerHTML
+    hbd.innerHTML = `<span>${hbd.innerHTML
         .split("")
-        .join("</span><span>")}</span>;
+        .join("</span><span>")}</span>`;
 
     const ideaTextTrans = {
         opacity: 0,
