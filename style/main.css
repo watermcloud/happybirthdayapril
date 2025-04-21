@@ -60,7 +60,7 @@ body {
 }
 
 .text-box .fake-btn {
-  background-color: rgb(21, 161, 237);
+  background-color: rgb(21, 171, 117);
   border-radius: 3px;
   bottom: -50px;
   color: #fff;
@@ -227,27 +227,10 @@ body {
 
 /* Media Queries */
 @media screen and (max-height: 1000px) {
-  .six .hat {
-    left: 40%;
-  }
-}
-
-@media screen and (max-height: 800px) {
-  .six .hat {
-    left: 37%;
-  }
-}
-
-@media screen and (max-height: 700px) {
-  .six .hat {
-    left: 32%;
-  }
-}
-
-@media screen and (max-height: 850px) and (max-width: 450px) {
-  .six .hat {
-    left: 32%;
-  }
+ .six .hat {
+  position: absolute; /* atau relative/fixed, tergantung konteks */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media screen and (max-width: 500px) {
