@@ -8,10 +8,24 @@ window.addEventListener('load', () => {
         cancelButtonColor: '#d33',
         confirmButtonText: 'Yes',
         cancelButtonText: 'No',
-    }).then((result) => {
+   }).then((result) => {
         if (result.isConfirmed) {
-            document.querySelector('.song').play();
-            animationTimeline();
+            // Buat tombol dummy agar browser menganggap gesture valid
+            const btn = document.createElement("button");
+            btn.style.display = "none";
+            document.body.appendChild(btn);
+
+            // Simulasikan klik dari user (gesture valid)
+            btn.addEventListener("click", () => {
+                const song = document.querySelector('.song');
+                if (song) {
+                    song.play().catch(err => console.warn("Autoplay blocked:", err));
+                }
+                animationTimeline();
+            });
+
+            btn.click();
+            document.body.removeChild(btn);
         } else {
             animationTimeline();
         }
